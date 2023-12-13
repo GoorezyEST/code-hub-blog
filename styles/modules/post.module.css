@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  max-width: 1148px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--white);
+}
+
+.post_title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: calc(32px * 1.5);
+}
+
+.post_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
