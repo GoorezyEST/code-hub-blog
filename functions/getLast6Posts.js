@@ -1,15 +1,14 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-const getPostsMetadata = () => {
+const getLast6Posts = () => {
   const folder = "posts/";
 
   const files = fs.readdirSync(folder);
 
-  const markdownPosts = files.filter((file) => file.endsWith(".md"));
+  let markdownPosts = files.filter((file) => file.endsWith(".md"));
 
-  //Get metadata for each post
-
+  // Get metadata for each post
   const posts = markdownPosts.map((fileName) => {
     const fileContent = fs.readFileSync(`posts/${fileName}`, "utf8");
 
@@ -24,9 +23,13 @@ const getPostsMetadata = () => {
     };
   });
 
+  // Retrieve only the last 6 posts
+
   const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  return sortedPosts;
+  const last6Posts = sortedPosts.slice(0, 3);
+
+  return last6Posts;
 };
 
-export default getPostsMetadata;
+export default getLast6Posts;
