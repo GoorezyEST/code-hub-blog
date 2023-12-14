@@ -7,11 +7,13 @@ function Navbar() {
   return (
     <nav className={styles.container}>
       <div className={styles.logo}>
-        <span>LOGO</span>
+        <p>
+          CODE&nbsp;<span>HUB</span>
+        </p>
       </div>
       <div className={styles.links}>
-        <Link href="/">Inicio</Link>
-        <Link href="/posts">Posts</Link>
+        <Link href="/">INICIO</Link>
+        <Link href="/posts">POSTS</Link>
       </div>
     </nav>
   );
