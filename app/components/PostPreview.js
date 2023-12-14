@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/modules/posts-preview.module.css";
+import formatSpanishDate from "@/functions/formatSpanishDate";
 
 //Component to display the user a preview of all the posts
 function PostPreview({ postData }) {
@@ -39,7 +40,7 @@ function PostPreview({ postData }) {
       <div className={styles.text}>
         <h2 className={styles.text_title}>{postData.title}</h2>
         <p className={styles.text_description}>{postData.subtitle}</p>
-        <p className={styles.text_date}>{postData.date}</p>
+        <p className={styles.text_date}>{formatSpanishDate(postData.date)}</p>
       </div>
     </Link>
   );
