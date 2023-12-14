@@ -31,7 +31,7 @@ function Code({ children, language }) {
           {copied ? <CopiedIcon /> : <CopyIcon />}
         </button>
       </CopyToClipboard>
-      <SyntaxHighlighter style={materialLight} language={language}>
+      <SyntaxHighlighter style={materialDark} language={language}>
         {children}
       </SyntaxHighlighter>
     </div>
