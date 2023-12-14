@@ -1,7 +1,7 @@
 ---
 title: "Ejemplo uno"
 subtitle: "Este es un post de ejemplo para probar estilos y tambien el webkit de una linea."
-date: "2023-12-13"
+date: "2023-11-5"
 image: "https://i.imgur.com/mSFrEAa.png"
 ---
 
