@@ -3,6 +3,7 @@ import getPostsMetadata from "@/functions/getPostsMetadata";
 import PostPreview from "../components/PostPreview";
 
 import styles from "@/styles/modules/posts-page.module.css";
+import Banner from "../components/Banner";
 
 function PostsPage() {
   //We get all the posts
@@ -13,7 +14,12 @@ function PostsPage() {
     return <PostPreview key={post.slug} postData={post} />;
   });
 
-  return <section className={styles.container}>{postsPreviews}</section>;
+  return (
+    <section className={styles.container}>
+      <Banner text={"MIS"} span={"POSTS"} />
+      <div className={styles.posts_container}>{postsPreviews}</div>
+    </section>
+  );
 }
 
 export default PostsPage;

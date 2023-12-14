@@ -1,9 +1,12 @@
 .container {
   width: 100%;
   max-width: 1148px;
+  background-color: var(--primary);
+}
+
+.posts_container {
   padding: 16px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  background-color: var(--white);
 }
