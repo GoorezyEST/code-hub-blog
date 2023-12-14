@@ -1,9 +1,42 @@
 .container {
   width: 100%;
   max-width: 1148px;
+  background-color: var(--primary);
+}
+
+/* RECENT POSTS STYLING */
+
+.recent_posts {
+  width: 100%;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.title > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary);
+  opacity: 0.75;
+}
+
+.title > h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--secondary);
+  line-height: 24px;
+}
+
+.posts_grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  background-color: var(--white);
 }
