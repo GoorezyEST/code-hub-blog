@@ -8,18 +8,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--white);
+  background-color: var(--primary);
 }
 
 :root {
-  --black: hsl(0, 0%, 12%);
-  --black-75-transparent: hsl(0, 0%, 12%, 0.75);
-  --black-25-transparent: hsl(0, 0%, 12%, 0.25);
-  --black-shadow: 0 0 4px hsl(0, 0%, 12%, 0.25);
-  --white: hsl(0, 0%, 98%);
-  --white-dark: hsl(0, 0%, 96%);
-  --accent: hsl(306, 100%, 19%);
-  --accent-light: hsl(306, 55%, 35%);
+  --primary: hsl(0, 0%, 10%);
+  --primary-light: hsl(0, 0%, 12%);
+  --secondary: hsl(0, 0%, 95%);
+  --accent: hsl(193, 90%, 54%);
+  --accent-light: hsl(193, 90%, 62%);
+  --shadow: 0 0 4px hsl(0, 0%, 0%, 0.25);
 }
 
 /* Posts styling for Markdown component */
@@ -27,22 +25,24 @@ body {
 .subtitle {
   font-size: 24px;
   font-weight: 700;
-  color: var(--black);
+  color: var(--secondary);
   line-height: calc(24px * 1.5);
 }
 
 .text {
   font-size: 16px;
   font-weight: 300;
-  color: var(--black);
+  color: var(--secondary);
   line-height: calc(16px * 1.5);
 }
 
 .code_container {
   width: 100%;
   position: relative;
-  border-radius: 4px;
-  border: 1px solid var(--black);
+}
+
+.code_container > pre {
+  margin: 0;
 }
 
 .code_copy {
@@ -64,7 +64,7 @@ body {
 .code_copy > svg {
   height: 100%;
   width: auto;
-  fill: var(--black);
+  fill: var(--secondary);
 }
 
 .image_and_text_container {
@@ -85,7 +85,7 @@ body {
   width: 50%;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: var(--black-shadow);
+  box-shadow: var(--shadow);
 }
 
 .image_and_text_image > img {
@@ -106,7 +106,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--white);
+  background-color: var(--secondary);
   z-index: 500;
   transition: opacity 200ms ease-in-out;
 }
@@ -115,9 +115,9 @@ body {
   width: 64px;
   height: 64px;
   position: relative;
-  background: var(--white);
+  background: var(--secondary);
   border-radius: 4px;
-  box-shadow: var(--black-shadow);
+  box-shadow: var(--shadow);
   overflow: hidden;
 }
 .image_loader_spinner:before {
