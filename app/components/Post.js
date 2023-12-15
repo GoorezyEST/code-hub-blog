@@ -7,6 +7,7 @@ import Text from "./posts/Text";
 import Subtitle from "./posts/Subtitle";
 import Code from "@/app/components/posts/Code";
 import TextAndImage from "./posts/TextAndImage";
+import List from "./posts/List";
 
 const postComponents = {
   subtitle: {
@@ -20,6 +21,9 @@ const postComponents = {
   },
   text_and_image: {
     component: TextAndImage,
+  },
+  list: {
+    component: List,
   },
 };
 
