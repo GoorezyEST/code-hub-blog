@@ -4,9 +4,82 @@
   background-color: var(--primary);
 }
 
+.posts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.utilities {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.search_bar {
+  width: 30%;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 4px 8px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.pagination > p {
+  font-size: 16px;
+  color: var(--secondary);
+  font-weight: 400;
+}
+
+.pagination > button {
+  width: 48px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 4px 0;
+  outline: none;
+  border: 1px solid var(--secondary);
+  background-color: transparent;
+  color: var(--secondary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.pagination > button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .posts_container {
-  padding: 16px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+}
+
+.posts_error {
+  width: 100%;
+  height: calc(100vh - 444px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.posts_error > p {
+  font-size: 16px;
+  color: var(--secondary);
+  font-weight: 600;
 }
