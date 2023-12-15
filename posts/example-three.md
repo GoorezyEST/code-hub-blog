@@ -2,7 +2,7 @@
 title: "Ejemplo tres"
 subtitle: "Este es un post de ejemplo para probar estilos y tambien el webkit de una linea."
 date: "2023-11-6"
-image: "https://i.imgur.com/mSFrEAa.png"
+image: "https://i.imgur.com/uukKBDf.png"
 ---
 
 <subtitle>Subtitulo guay</subtitle>
