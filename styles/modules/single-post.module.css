@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  max-width: 1148px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.recommendations {
+  background-color: red;
+  position: sticky;
+  top: 64 px;
+  width: 100%;
+  max-width: 350px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0px 0px 32px;
+}
