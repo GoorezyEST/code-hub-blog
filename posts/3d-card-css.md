@@ -2,7 +2,7 @@
 title: "CSS: Carta 3D"
 subtitle: "Un efecto on hover que dará la sensación al usuario de que la carta se mueve en espacio tridimensional."
 date: "2023-12-18"
-image: "https://i.imgur.com/GykuDbh.png"
+image: "https://i.imgur.com/9HygNgB.png"
 tags: ["css"]
 ---
 
