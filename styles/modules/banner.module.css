@@ -28,7 +28,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 54px;
+  font-size: 48px;
   font-weight: 700;
   color: var(--secondary);
   z-index: 100;
@@ -38,4 +38,10 @@
 
 .banner_title > span {
   color: var(--accent);
+}
+
+@media screen and (min-width: 1164px) {
+  .banner_title {
+    font-size: 54px;
+  }
 }

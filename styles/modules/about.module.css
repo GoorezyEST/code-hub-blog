@@ -1,11 +1,12 @@
 .about_content {
   width: 100%;
   display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
 .about_content_text {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -19,7 +20,8 @@
 }
 
 .about_content_image {
-  width: 50%;
+  width: 100%;
+  height: 175px;
   position: relative;
   border-radius: 4px;
   overflow: hidden;
@@ -40,4 +42,17 @@
 .about_content_image:hover > img {
   filter: grayscale(0);
   transform: scale(1.025);
+}
+
+@media screen and (min-width: 1164px) {
+  .about_content {
+    flex-direction: row;
+  }
+  .about_content_text {
+    width: 50%;
+  }
+  .about_content_image {
+    width: 50%;
+    height: auto;
+  }
 }
