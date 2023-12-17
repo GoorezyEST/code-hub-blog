@@ -11,6 +11,20 @@ body {
   background-color: var(--primary);
 }
 
+*::-webkit-scrollbar {
+  width: 1em;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--primary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border: 6px solid var(--primary);
+  border-radius: 8px;
+}
+
 :root {
   --primary: hsl(0, 0%, 10%);
   --primary-light: hsl(0, 0%, 12%);
