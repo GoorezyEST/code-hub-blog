@@ -3,7 +3,7 @@ title: "Patrones de diseño: Facade"
 subtitle: "Un patrón que proporciona una interfaz unificada para un conjunto de interfaces en un subsistema, simplificando su uso."
 date: "2023-12-8"
 image: "https://i.imgur.com/l5dmiTW.png"
-tags: "design patterns"
+tags: ["design patterns"]
 ---
 
 <text>
