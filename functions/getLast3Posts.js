@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-const getLast6Posts = () => {
+const getLast3Posts = () => {
   const folder = "posts/";
 
   const files = fs.readdirSync(folder);
@@ -27,9 +27,9 @@ const getLast6Posts = () => {
 
   const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  const last6Posts = sortedPosts.slice(0, 3);
+  const last3Posts = sortedPosts.slice(0, 3);
 
-  return last6Posts;
+  return last3Posts;
 };
 
-export default getLast6Posts;
+export default getLast3Posts;
