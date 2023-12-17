@@ -6,7 +6,7 @@ import styles from "@/styles/modules/posts-preview.module.css";
 import formatSpanishDate from "@/functions/formatSpanishDate";
 
 //Component to display the user a preview of all the posts
-function PostPreview({ postData }) {
+function PostPreview({ postData, url }) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   //useEffect to handle the image loading
@@ -27,7 +27,7 @@ function PostPreview({ postData }) {
   }, [postData.image]);
 
   return (
-    <Link href={`posts/${postData.slug}`} className={styles.container}>
+    <Link href={url} className={styles.container}>
       <div className={styles.image}>
         <div
           className="image_loader"

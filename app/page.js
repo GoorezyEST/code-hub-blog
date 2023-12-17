@@ -11,7 +11,9 @@ function Home() {
 
   //We create a PostPreview component for each post
   const postsPreviews = postMetadata.map((post) => {
-    return <PostPreview key={post.slug} postData={post} />;
+    return (
+      <PostPreview key={post.slug} postData={post} url={`posts/${post.slug}`} />
+    );
   });
 
   return (

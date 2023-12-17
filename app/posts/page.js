@@ -98,7 +98,13 @@ function PostsPage() {
         {currentPosts !== undefined && currentPosts.length > 0 && (
           <div className={styles.posts_container}>
             {currentPosts.map((post) => {
-              return <PostPreview key={post.slug} postData={post} />;
+              return (
+                <PostPreview
+                  key={post.slug}
+                  postData={post}
+                  url={`posts/${post.slug}`}
+                />
+              );
             })}
           </div>
         )}

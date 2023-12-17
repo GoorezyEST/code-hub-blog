@@ -26,7 +26,9 @@ function SinglePostPage({ params }) {
 
   //We create a PostPreview component for each post
   const postsPreviews = postMetadata.map((post) => {
-    return <PostPreview key={post.slug} postData={post} />;
+    return (
+      <PostPreview key={post.slug} postData={post} url={`./${post.slug}`} />
+    );
   });
 
   console.log();
