@@ -13,9 +13,9 @@ function PostsPage() {
 
   // We get all the posts
   const retrieveAllPosts = async () => {
-    const response = await fetch("http://localhost:3000/api/posts").then(
-      (data) => data.json()
-    );
+    const response = await fetch(
+      "https://code-hub-goorezy.vercel.app/api/posts"
+    ).then((data) => data.json());
     setPostMetadata(response);
   };
 

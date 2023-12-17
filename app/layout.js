@@ -9,7 +9,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://code-hub.vercel.app/"),
+  metadataBase: new URL("https://code-hub-goorezy.vercel.app/"),
   title: "Code Hub",
   description:
     "Un blog con el propósito de almacenar scripts, funciones, soluciones a errores, así como cualquier otra información relacionada con la programación, con el fin de tener un acceso más fácil a estos recursos. Además, esto me brinda la oportunidad de compartir mis conocimientos con otros desarrolladores.",
@@ -17,7 +17,7 @@ export const metadata = {
     title: "Code Hub",
     description:
       "Un blog con el propósito de almacenar scripts, funciones, soluciones a errores, así como cualquier otra información relacionada con la programación, con el fin de tener un acceso más fácil a estos recursos. Además, esto me brinda la oportunidad de compartir mis conocimientos con otros desarrolladores.",
-    url: "https://code-hub.vercel.app/",
+    url: "https://code-hub-goorezy.vercel.app/",
   },
   keywords: [
     "blog",

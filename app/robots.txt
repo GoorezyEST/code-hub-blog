@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://code-hub.vercel.app//sitemap.xml
+Sitemap: https://code-hub-goorezy.vercel.app//sitemap.xml

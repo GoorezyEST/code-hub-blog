@@ -2,8 +2,6 @@ import PostComponent from "@/app/components/Post";
 import getPostsMetadata from "@/functions/getPostsMetadata";
 import React from "react";
 import styles from "@/styles/modules/single-post.module.css";
-import getLast3Posts from "@/functions/getLast3Posts";
-import PostPreview from "@/app/components/PostPreview";
 import Recommendations from "@/app/components/Recommendations";
 
 //We define which will be the routes available to have it all static
