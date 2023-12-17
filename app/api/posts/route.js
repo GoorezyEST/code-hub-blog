@@ -22,6 +22,7 @@ export async function GET(req, res) {
         date: matterResult.data.date,
         image: matterResult.data.image,
         slug: fileName.replace(".md", ""),
+        tags: matterResult.data.tags,
       };
     });
 

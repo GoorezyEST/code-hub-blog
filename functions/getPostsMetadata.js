@@ -21,6 +21,7 @@ const getPostsMetadata = () => {
       date: matterResult.data.date,
       image: matterResult.data.image,
       slug: fileName.replace(".md", ""),
+      tags: matterResult.data.tags,
     };
   });
 
