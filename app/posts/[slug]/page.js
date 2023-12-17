@@ -2,8 +2,9 @@ import PostComponent from "@/app/components/Post";
 import getPostsMetadata from "@/functions/getPostsMetadata";
 import React from "react";
 import styles from "@/styles/modules/single-post.module.css";
-import getLast6Posts from "@/functions/getLast6Posts";
+import getLast3Posts from "@/functions/getLast3Posts";
 import PostPreview from "@/app/components/PostPreview";
+import Recommendations from "@/app/components/Recommendations";
 
 //We define which will be the routes available to have it all static
 //we dont want it dynamic to increase performance
@@ -21,28 +22,10 @@ function SinglePostPage({ params }) {
   //From the params we get the slug
   const slug = params.slug;
 
-  //We get all the posts
-  let postMetadata = getLast6Posts();
-
-  //We create a PostPreview component for each post
-  const postsPreviews = postMetadata.map((post) => {
-    return (
-      <PostPreview key={post.slug} postData={post} url={`./${post.slug}`} />
-    );
-  });
-
-  console.log();
-
   return (
     <section className={styles.container}>
       <PostComponent postName={slug} />
-      <div className={styles.recommendations}>
-        <div className="title">
-          <p>Explora mis</p>
-          <h2>Últimos posts:</h2>
-        </div>
-        {postsPreviews}
-      </div>
+      <Recommendations slug={slug} />
     </section>
   );
 }
