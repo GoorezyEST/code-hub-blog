@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "@/styles/modules/home.module.css";
 import PostPreview from "./components/PostPreview";
-import getLast6Posts from "@/functions/getLast6Posts";
+import getLast3Posts from "@/functions/getLast3Posts";
 import Banner from "./components/Banner";
 import About from "./components/About";
 
 function Home() {
   //We get all the posts
-  let postMetadata = getLast6Posts();
+  let postMetadata = getLast3Posts();
 
   //We create a PostPreview component for each post
   const postsPreviews = postMetadata.map((post) => {
