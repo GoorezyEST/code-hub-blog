@@ -10,10 +10,10 @@ export const generateMetadata = ({ params }) => {
 
   return {
     title: `Code Hub - ${metadata.title}`,
-    description: `${metadata.description}`,
+    description: `${metadata.subtitle}`,
     openGraph: {
       title: `Code Hub - ${metadata.title}`,
-      description: `${metadata.description}`,
+      description: `${metadata.subtitle}`,
       images: [{ url: `${metadata.image}` }],
     },
   };
