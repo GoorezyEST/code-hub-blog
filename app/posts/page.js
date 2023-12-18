@@ -34,7 +34,10 @@ function PostsPage() {
   const currentPosts = filteredPosts?.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0 });
+  };
 
   return (
     <section className={styles.container}>
@@ -109,6 +112,31 @@ function PostsPage() {
           </div>
         )}
       </section>
+
+      {currentPosts !== undefined && (
+        <div className={styles.pagination_mobile_wrapper}>
+          <div className={styles.pagination_mobile}>
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              Ant
+            </button>
+            <p>
+              Página: {currentPage} de{" "}
+              {Math.ceil(postMetadata.length / postsPerPage)}
+            </p>
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              disabled={
+                currentPage === Math.ceil(postMetadata.length / postsPerPage)
+              }
+            >
+              Sig
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

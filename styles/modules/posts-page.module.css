@@ -40,18 +40,20 @@
 }
 
 .pagination {
+  display: none;
   width: 75%;
-  display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.pagination_mobile > p,
 .pagination > p {
   font-size: 16px;
   color: var(--secondary);
   font-weight: 400;
 }
 
+.pagination_mobile > button,
 .pagination > button {
   width: 48px;
   font-size: 16px;
@@ -67,9 +69,19 @@
   transition: all 200ms ease-in-out;
 }
 
+.pagination_mobile > button:disabled,
 .pagination > button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.pagination_mobile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  margin-bottom: 16px;
 }
 
 .posts_container {
@@ -106,7 +118,7 @@
   }
 
   .search_bar {
-    width: 30%;
+    width: 300px;
     font-size: 16px;
     font-weight: 300;
     color: var(--secondary);
@@ -116,18 +128,38 @@
     padding: 4px 8px;
   }
 
+  .posts_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .pagination_mobile_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pagination_mobile {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin-bottom: 16px auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search_bar {
+    width: 30%;
+  }
+
   .pagination {
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
-  }
-
-  .posts_container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
   }
 }
 
