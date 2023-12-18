@@ -33,6 +33,9 @@ function PostsPage() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts?.slice(indexOfFirstPost, indexOfLastPost);
 
+  const shouldRenderPagination =
+    filteredPosts && filteredPosts.length > postsPerPage;
+
   // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -69,12 +72,14 @@ function PostsPage() {
               </button>
               <p>
                 Página: {currentPage} de{" "}
-                {Math.ceil(postMetadata.length / postsPerPage)}
+                {Math.ceil(filteredPosts.length / postsPerPage)}
               </p>
               <button
                 onClick={() => paginate(currentPage + 1)}
                 disabled={
-                  currentPage === Math.ceil(postMetadata.length / postsPerPage)
+                  currentPage ===
+                    Math.ceil(postMetadata.length / postsPerPage) ||
+                  !shouldRenderPagination
                 }
               >
                 Sig
@@ -124,12 +129,13 @@ function PostsPage() {
             </button>
             <p>
               Página: {currentPage} de{" "}
-              {Math.ceil(postMetadata.length / postsPerPage)}
+              {Math.ceil(filteredPosts.length / postsPerPage)}
             </p>
             <button
               onClick={() => paginate(currentPage + 1)}
               disabled={
-                currentPage === Math.ceil(postMetadata.length / postsPerPage)
+                currentPage === Math.ceil(postMetadata.length / postsPerPage) ||
+                !shouldRenderPagination
               }
             >
               Sig
