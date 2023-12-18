@@ -3,6 +3,21 @@ import getPostsMetadata from "@/functions/getPostsMetadata";
 import React from "react";
 import styles from "@/styles/modules/single-post.module.css";
 import Recommendations from "@/app/components/Recommendations";
+import getSinglePostMetadata from "@/functions/getSinglePostMetadata";
+
+export const generateMetadata = ({ params }) => {
+  const metadata = getSinglePostMetadata(params.slug);
+
+  return {
+    title: `Code Hub - ${metadata.title}`,
+    description: `${metadata.description}`,
+    openGraph: {
+      title: `Code Hub - ${metadata.title}`,
+      description: `${metadata.description}`,
+      images: [{ url: `${metadata.image}` }],
+    },
+  };
+};
 
 //We define which will be the routes available to have it all static
 //we dont want it dynamic to increase performance
