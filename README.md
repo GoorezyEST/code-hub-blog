@@ -1,5 +1,3 @@
-![Franco Espinosa Logo SVG](https://i.imgur.com/DXFtqGm.png)
-
 # Code Hub - Blog
 
 A blog developed with the objective of being able to create and display posts through Markdown files.
